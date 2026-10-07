@@ -1,0 +1,24 @@
+def ONE(c):
+    c.append(1)
+    return TWO(c)
+
+def TWO(c):
+    c.append(2)
+    return THREE(c)
+
+def THREE(c):
+    c.append(3)
+    return ONE(c)
+
+c = []
+
+for _ in range(5700):
+    c.append(3)
+    c.append(1)
+    c.append(2)
+
+print("THE END IS THE BEGINNING")
+print("->".join(map(str, c)))
+print()
+print("NUMBER OF CYCLES: ", len(c) // 3)
+print("THE BEGINNING IS THE END")
